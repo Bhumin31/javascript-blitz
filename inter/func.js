@@ -17,5 +17,9 @@ const obj = {
 function myObj(anyobj){
     console.log(`${anyobj.name} bounty is ${anyobj.bounty}`);
 }
+myObj(obj);
 
-myObj(obj)
+// IIFE(Immediately invoked function expressions)
+( function n1(){
+    console.log("works");
+} )()
