@@ -7,3 +7,6 @@ let newNums = arr.map( (i) => {return i * 10})
                         .map( (j) => {return j + 1})
                         .filter( (k) => {return k >= 50})
 console.log(newNums)
+
+let redArr = arr.reduce( (acc,currval) => {return acc + currval}, 0)
+console.log(redArr);
