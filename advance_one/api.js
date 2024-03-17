@@ -1,9 +1,12 @@
 const button = document.querySelector('.getDetails')
 
+
 let p = document.querySelector('.details')
 
 button.addEventListener('click',function(e){
-    const url = 'https://api.github.com/users/blitzboi'
+    e.preventDefault();
+    const idGH  = String(document.querySelector('#id').value);
+    const url = `https://api.github.com/users/${idGH}`
     const xhr = new XMLHttpRequest();
     xhr.open('GET',url);
     xhr.onreadystatechange = function(){
