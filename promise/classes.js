@@ -1,13 +1,26 @@
 class User{
-    constructor(username,mail){
+    constructor(username){
         this.username = username;
-        this.mail = mail;
     }
 
     log(){
-        console.log(`Username is ${this.username} and mail is ${this.mail}`);
+        console.log(`Username is ${this.username}`);
     }
 }
 
-const usr = new User("blitz","blitz@bozo.xyz")
+
+class IGN extends User{
+    constructor(username,mail){
+        super(username)
+        this.mail = mail;
+    }
+        
+    logIGN(){
+        console.log(`IGN is ${this.username}`);
+    }
+    
+}
+
+const usr = new IGN("blitz","blitz@bozo.xyz")
 usr.log()
+usr.logIGN()
